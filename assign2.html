@@ -105,24 +105,168 @@
         </p>
         
         <h3>Class Diagrams / CRC Cards</h3>
-        <p>
-	        <div class="Class">
-		        <h4>Vehicle</h4>
-		        <h5>Type</h5>
-		        <h5>Features</h5>
-		        <h5>Rate</h5>
-		        <h5>PerKilometerRate</h5>
-		        <h5>InsuranceCoverage</h5>
-	        </div>
-	        
-	        <div class="Class">
-		        <h4>Customer</h4>
-		        <h5>Name</h5>
-		        <h5>Address</h5>
-		        <h5>Phone Number</h5>
-		        <h5>Points</h5>
-	        </div>
-        </p>
+
+        <div class="row">
+            <div class="col-md-6">
+
+                <table class="table table-bordered">
+                    <tr>
+                        <th colspan="2">Location</th>
+                    </tr>
+                    <tr>
+                        <td><em>Responsibilities</em></td>
+                        <td><em>Collaborators</em></td>
+                    </tr>
+                    <tr>
+                        <td>Stores the city of the branch</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Stores the location of the branch in the city</td>
+                        <td></td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="col-md-6">
+
+                <table class="table table-bordered">
+                    <tr>
+                        <th colspan="2">Customer</th>
+                    </tr>
+                    <tr>
+                        <td><em>Responsibilities</em></td>
+                        <td><em>Collaborators</em></td>
+                    </tr>
+                    <tr>
+                        <td>Stores the biographical data for the customer (name, address, phone number)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Manages if the customer is a Club member</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Manages their club points</td>
+                        <td></td>
+                    </tr>                    
+                </table>
+
+            </div>
+            <div class="col-md-6">
+
+                <table class="table table-bordered">
+                    <tr>
+                        <th colspan="2">Vehicle</th>
+                    </tr>
+                    <tr>
+                        <td><em>Responsibilities</em></td>
+                        <td><em>Collaborators</em></td>
+                    </tr>
+                    <tr>
+                        <td>Stores the type of car or truck</td>
+                        <td>Vehicle Type</td>
+                    </tr>
+                    <tr>
+                        <td>Stores the features</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Manages the rate (daily, weekly, hourly)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Manages the different per-kilometer-rates</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Manages the different types of insurance (daily, weekly, hourly)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Tracks the office the vehicle belongs to</td>
+                        <td>Location</td>
+                    </tr>
+                    <tr>
+                        <td>Stores the original purchase price of the vehicle</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Manages the mileage of the vehicle and flags it if the vehicle is now eligible for sale</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Manages a flag to see if the vehicle is currently rented</td>
+                        <td></td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="col-md-6">
+
+                <table class="table table-bordered">
+                    <tr>
+                        <th colspan="2">Vehicle Type</th>
+                    </tr>
+                    <tr>
+                        <td><em>Responsibilities</em></td>
+                        <td><em>Collaborators</em></td>
+                    </tr>
+                    <tr>
+                        <td>Stores the types of cars and trucks (Economy, Compact, Mid-size, Standard, Full-size, Premium, Luxury, SUV, Van, 24-foot, 15-foot, 12-foot, Box Trucks, Cargo Vans)</td>
+                        <td></td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="col-md-6">
+
+                <table class="table table-bordered">
+                    <tr>
+                        <th colspan="2">Reservation</th>
+                    </tr>
+                    <tr>
+                        <td><em>Responsibilities</em></td>
+                        <td><em>Collaborators</em></td>
+                    </tr>
+                    <tr>
+                        <td>Tracks the customer that made the reservation</td>
+                        <td>Customer</td>
+                    </tr>
+                    <tr>
+                        <td>Tracks the dates and times the customer requested the vehicle for</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Tracks the location the customer wants to reserve the vehicle from</td>
+                        <td>Location</td>
+                    </tr>
+                    <tr>
+                        <td>Tracks the type of vehicle the customer wants to reserve</td>
+                        <td>Vehicle</td>
+                    </tr>
+                    <tr>
+                        <td>Manages the total cost for the reservation</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Manages any optional insurance the customer may have requested</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Manages a flag to see if the vehicle has been returned</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Manages a flag to see if the customer has paid</td>
+                        <td></td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+
         
         <div class="clearfix"></div>
         
