@@ -455,6 +455,13 @@
         <h3>Database / Data Structure</h3>
         <div class="row">
             <div class="col-md-12">
+                <p>These are the main tables that will be used in the database. They follow a very similar pattern to the classes that will be used. Where they differ from the classes, is that these are being used primarily for storage. There doesn't need to be a rental system table either, as that class is simply managing the data that is coming out of the three main tables: Reservation, Vehicle and Customer.</p>
+
+                <p>A lot of this database structure would have been predefined in the first phase of this project (IE Group 1), but are displayed here for clarity in how the tables are linked together. Reservation for example is only being used to tie some of the other tables together, and we're only using it to perform an ID lookup if a customer attempts to rent a vehicle having already made a reservation.</p>
+
+                <p>Additional fields would have been added to some existing tables to extend upon functionality that would have already been done, for example insurance, which is a new feature, that now needs to be stored in both Vehicles and Reservations.</p>
+            <div>            
+            <div class="col-md-12">
                 <img src="DatabaseDiagrams\comp7081_assignment2_database_diagram.png" alt="Database Diagram" />
             </div>
         </div>
