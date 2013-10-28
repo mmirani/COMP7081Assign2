@@ -407,8 +407,47 @@
 			
         <h3>Components</h3>
         <p>
-	        Insert text here
+	        The main components of the system are the following: RentalSystem, Customer, Vehicle, Vehicle Type, Reservation and Location.  
         </p>
+        
+        <p>The object-oriented view is shown in the Detailed class diagram section below where all components are fully elaborated to include all attributes and operations relevant in implementation.  </p>
+        
+        <h4>Component Message Details</h4>
+        
+        <h5>RentalSystem</h5>
+        
+        <ul>
+			<li>enterReservationInfo (customerInfo, reservationInfo, vehicle): void</li>
+			<li>addCustomer (customerInfo): void</li>
+			<li>checkVehicleAvailability (startDate, endDate): void</li>
+			<li>addInsurance (customer, reservation): void</li>
+			<li>displayReservationDetails (reservation): string</li>
+			<li>getRates (reservationId): string</li>
+			<li>printBill (reservationID)</li>
+			<li>lookupPoints (customer: number</li>
+        </ul>
+        
+        <h5>Vehicle</h5>
+        
+        <ul>
+			<li>getVehicleInfo(VehicleID): string</li>
+        </ul>
+        
+        <h5>Customer</h5>
+        
+        <ul>
+			<li>getCustomerDetails(customerID): string</li>
+			<li>validatePoints (amount, customerID): boolean</li>
+			<li>getPoints(customerID): number</li>
+        </ul>
+        
+        <h5>Reservation</h5>
+        
+        <ul>
+			<li>findAvailableVehicle (vehicleType, startDate, endDate): Array(vehicleID)</li>
+			<li>rentWithPoints (customerID, startDate, endDate, vehicleType): reservationID</li>
+			<li>tentativeReservation (startDate, endDate, insurance): reservationID</li>
+        </ul>
         
         <h3>Database / Data Structure</h3>
         <div class="row">
