@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Assignment 2 | COMP 7081 | Group 2 | Joseph Favia</a>
+          <a class="navbar-brand" href="#">Assignment 2 | COMP 7081 | Group 2</a>
         </div>
       </div>
     </div>
@@ -56,12 +56,19 @@
         
         <h2>Introduction of Project</h2>
         <p>
-	        The goal of this project is to implement a system for the Car Rental company called SuperRent.  The primary activity of SuperRent is to rent out cars and trucks to users.  
+	        The goal of this project is to implement a system for the Car Rental company called SuperRent. The primary activity of SuperRent is to rent out cars and trucks to users. We will be outlining how the system can rent vehicles, return vehicles, exchange points to rent or purchase vehicles and buy insurance. 
         </p>
         
         <h2>Background</h2>
         <p>
-	        Insert text here
+	        The car rental company SuperRent needs a system that will help streamline their operating procedures. The system will need to handle the different services SuperRent offers. These services include customers:
+			<ul>
+                <li>renting vehicles.</li>
+				<li>returning vehicles.</li>
+				<li>exchanging points to rent or buy a vehicle.</li>
+				<li>buying insurance for the rented vehicle.</li>
+            </ul>
+			The proposed SuperRent system should allow SuperRent employees to process all of these requests and store the required information within a single system.
         </p>
         
         <h2>Requirement Analysis</h2>
@@ -320,18 +327,50 @@
 	        Insert text here
         </p>
         
-        <h3>Data Flow Diagram</h3>
-        <p>
-	        Insert text here
-        </p>
+        <h3>Data Flow Diagrams</h3>
+        <div class="row">
+            <div class="col-md-12">
+			<h4>Data Flow Diagram 0</h4>
+			<p>
+			At the DFD0 level, the the SuperRent System is depicted as a single bubble interacting with the external systems. Here we have the clerk who enters data into the system and that results in a vehicle type being given to the customer and the transaction information being displayed on the clerk's screen.
+			</p>
+                <img src="DataFlowDiagrams\DFD0.JPG" alt="DataFlow Diagram 0" />
+            </div>
+			<div class="col-md-12">
+			<h4>Data Flow Diagram 1</h4>
+			<p>
+			At the DFD1 level, the chart is updated to show the flow of data through the system. The information of the request goes to the corresponding module (rent, buy or return). Then the data goes to any additional modules needed in those situations (insurance, points). After all required information for the transaction is gathered, it is stored to the SuperRent system in the "Transaction Information" storage module. Then the data for the request is sent out as a vehicle and to the clerk's screen.
+			</p>
+                <img src="DataFlowDiagrams\DFD1.JPG" alt="DataFlow Diagram 1" />
+            </div>
+			<div class="col-md-12">
+			<h4>Data Flow Diagram 2</h4>
+			<p>
+			At the DFD2 level, the process after the data commit can be further reduced to show the specific fields being passed to the external systems.
+			</p>
+                <img src="DataFlowDiagrams\DFD2.JPG" alt="DataFlow Diagram 2" />
+            </div>
+        </div>
         
         <h2>System Design</h2>
         
         <h3>Architecture</h3>
-        <p>
-	        Insert text here
-        </p>
-        
+		<div class="col-md-12">
+			<p>
+	        The system follows a Data-Flow Architecture design. The GUI is where The system is access and customer data is entered. From the GUI, three different modules can be selected based on what the customer needs to do: rent, buy or return.
+			</p>
+			<p>
+			If renting a vehicle, the rent vehicle module will be loaded. The system checks if this customer has a reservation and updates the rent module with the reservation information. Then the insurance module is loaded and weekly, daily or hourly insurance is selected. The system loads the vehicle inventory module and checks a vehicle out. The paperwork is processed and given to the customer at checkout.
+			</p>
+			<p>
+			If buying a vehicle, the buy vehicle module will be loaded. The system loads the used vehicle inventory module and a vehicle is selected from the available inventory. The billing module is loaded where the customer's billing information is entered. At this stage the points system can be accessed if the customer is using points to purchase the vehicle. After all of the information has been entered the customer is charged. Then the checkout module is loaded where the paperwork is processed and given to the customer.
+			</p>
+			<p>
+			If returning a vehicle, the return vehicle module will be loaded. The system access the vehicle's usage information and it is updated with the updated information from the returned vehicle. The billing module is loaded where the customer's billing information is entered. At this stage the points system can be accessed if the customer is using points to pay for the rental vehicle. After all of the information has been entered the customer is charged. Then the checkout module is loaded where the paperwork is processed and given to the customer.
+			</p>
+            <img src="ArchitectureDiagram\Architecture.JPG" alt="Architecture" />
+        </div>
+			
         <h3>Components</h3>
         <p>
 	        Insert text here
