@@ -326,10 +326,38 @@
         <p>
 	 	
 		<img src="SequenceDiagrams\PointsToBuySequenceDiagram.jpg" alt="Points To Buy Sequence Diagram" height="50%" />
+<p>-The renter returns the vehicle
+<p>-the clerk enters the return details (date, time, kms, fuelremaining)
+<p>-The system gets the rates for the reservation
+<p>-The system calculates the charges
+<p>-A bill is printed out by the system and giving by the clerk to the customer
+<p>-The customer pays with either cash or credit
+<p>-The clerk enters either the amount paid by cash, or the credit card information that the customer provides
+<p>-The credit card is authorized and the vehicle has been returned
+<p>
 		<img src="SequenceDiagrams\PointsToRentSequenceDiagram.jpg" alt="Points To Rent Sequence Diagram" height="50%" />
+<p>-The renter indicates to the clerk how many points he wants to use to rent a vehicle and the renters customer number
+<p>-The clerk enters this information, and the points are validated by the system
+<p>-The the available vehicles that can be rented with points are searched in the DB to find an available rental that can be rented with points
+<p>-The reservation details are confirmed
+<p>-The reservation details are printed off to the clerk, and given to the renter
 		<img src="SequenceDiagrams\Rent+InsuranceSequenceDiagram.jpg" alt="Rent+Insurance Sequence Diagram" height="50%" />
+<p>-The renter provides reservation details (either confirmation number or a phone number) to the clerk who looks up the reservation in the system
+<p>-The reservations are fetched, and the user is asked whether they want optional insurance by the system from the clerk
+<p>-The choice is indicated to the clerk and entered into the system
+<p>-The clerk asks for rental information, such as a drivers license number and credit card information and enters it into the system
+<p>-The information is updated on the back end, and the credit card is authorized
+<p>-If the authorization is successful, the points that the customer has accumulated from the transaction are calculated
+<p>-The rental information is displayed to the clerk, and is printed out and provided to the customer
+<p>-The customer leaves with the vehicle
 		<img src="SequenceDiagrams\ReturnSequenceDiagram.jpg" alt="Return Sequence Diagram.jpg" height="50%" />
-
+<p>-The customer returns the rented vehicle
+<p>-The clerk enters the return details, such as date, time kms, and fuel remaining.
+<p>-The rates are fetched by the system
+<p>-The total cost is calculated by the system using the weekly, daily, and hourly rates
+<p>-The bill is printed to the clerk, and handed over to the customer
+<p>-The customer either pays with cash or credit, and the amount and/or the credit card information is entered into the system
+<p>-If a credit card is used, the credit card is authorized
 	        Testing Text descriptions.
         </p>
         
