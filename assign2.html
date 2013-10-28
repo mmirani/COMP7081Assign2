@@ -399,9 +399,65 @@
         <h3>Detailed Sequence Diagrams</h3>
         <p>
 	        <img src="SequenceDiagrams\PointsToBuyDetailedSequenceDiagram.jpg" alt="Points To Buy Detailed Sequence Diagram" height="50%" />
-		<img src="SequenceDiagrams\PointsToRentDetailedSequenceDiagram.jpg" alt="Points To Rent Detailed Sequence Diagram" height="50%" />
-		<img src="SequenceDiagrams\Rent+InsuranceDetailedSequenceDiagram.jpg" alt="Rent+Insurance Detailed Sequence Diagram" height="50%" />
-		<img src="SequenceDiagrams\ReturnDetailedSequenceDiagram.jpg" alt="Return Detailed Sequence Diagram.jpg" height="50%" />
+		
+		 <p>-Customer selects a used car from the list of cars available and informs the manager they want to buy
+		 <p>-The manager selects the car in the system to buy
+		 <p>-The vehicle info is pulled back by the rental system based on the vehicle specified
+		 <p>-The customer provides their name, telephone number, and DL number to the manager
+		 <p>-The manager inputs this info into the system
+		 <p>-The customer info is updated to reflect the provided info
+		 <p>-The customer provides a potential combination of cash/credit card payment with their club points they have available to the manager
+		 <p>-The manager inputs this into the system, including the amount of cash or credit card info and how many points are to be used
+		 <p>-The system checks to see if the points are indeed valid and accurate
+		 <p>-The system attempts to make a sale using the price, date, points to be used as currency, and the manager who made the sale.
+		 <p>-The credit card is put on file
+		 <p>-The credit card on file is authorized via a credit card authorization company, which returns whether the card is valid or not to be used for the 				amount listed
+		 <p>-The system creates payment documentation that can be printed and provided to the customer
+		 <p>-The manager provides the sale documentation to the customer and the sale is complete
+		 <p>
+		 <p><img src="SequenceDiagrams\PointsToRentDetailedSequenceDiagram.jpg" alt="Points To Rent Detailed Sequence Diagram" height="50%" />
+ <p>-Renter indicates he want to rent a specific vehicle type with their points
+ <p>-the clerk enters the customer, the vehicle type they want to rent, and the points they wish to use towards the rental
+ <p>-The system validates the points and confirms they exist
+ <p>-The system calculates the amount of rental days allowed for the vehicle type with the number of points provided
+ <p>-The amount of rental days allowed are displayed to the clerk to inform the customer
+ <p>-The renter then selects the start date and end date of the rental
+ <p>-the Clerk enters this into the system
+ <p>-The system fetches a list of available vehicles that match the dates provided and the vehicle type criteria
+ <p>-A list of available vehicles are present to the clerk, which is then presented to the customer
+ <p>-The customer selects a vehicle
+ <p>-The clerk books the vehicle and books a reservation with the provided info
+ <p>-The system updates the vehicles availability so no one else can rent it during that time
+ <p>-The system calculates how many points will be subtracted for the dates selected
+ <p>-The system subtracts the appropriate amount for the rental from the customers account
+ <p>-The system provides reservation confirmation, which the clerk provides to the customer 
+
+		 <p><img src="SequenceDiagrams\Rent+InsuranceDetailedSequenceDiagram.jpg" alt="Rent+Insurance Detailed Sequence Diagram" height="50%" />
+ <p>-The renter provides reservation information to the clerk
+ <p>-The clerk enters the reservation info into the system
+ <p>-The customer is added into the system, and the vehicle they've selected is checked for availability in the dates they've requested
+ <p>-A tentative reservation is made
+ <p>-The customer is asked if they want optional insurance
+ <p>-The selection is added into the system by the clerk, indicating which reservation the resulting answer is applied to
+ <p>-The reservation is updated with the insurance choice
+ <p>-The final information, the drivers license number, credit card number, expirery date, and type is given to the clerk and entered in the system
+ <p>-The system compeltes the rental agreement and adds the credit card on file.
+ <p>-The credit card is authorized and checked to see if the transaction can be completed
+ <p>-The system calculates how many points are gained via this transaction
+ <p>-If an existing reservation is to be used, the confirmation number and/or phone number can be provided to look up the existing reservation
+ <p>-The insurance related workflow is the same as not having an existing reservation
+ <p>-The final information that is provided is the same as not having an existing reservation
+		 <p><img src="SequenceDiagrams\ReturnDetailedSequenceDiagram.jpg" alt="Return Detailed Sequence Diagram.jpg" height="50%" />
+ <p>-The customer returns the vehicle
+ <p>-The vehicle return specifics are entered into the system and applied to the specific reservation for said vehicle
+ <p>-The vehicle info and rates are retrieved, and the charges are calculated based on the vehicled weekly, daily, and hourly rates
+ <p>-The reservation is updated with the amount owing, and this is then relayed to the customer through the clerk
+ <p>-The customer provides their credit card or cash and the clerk enters the relavent amounts, numbers, and dates into the system, as well as the points a customer wants to use to help cover the cost
+ <p>-The system retrieves the customers points, vehicle info, and calculates the amount of money owing after the points have been applied
+ <p>-The credit card is authorized, and the amount of points that the customer earned for the rental is calculated and the total is updated accordingly
+ <p>-The customer is given back cash that is equivalent to what they have saved using their points (the full amount is charged, but the points give money back)
+ <p>-The system generates the payment documentation, and the clerk gives it to the customer
+ <p>-The system closes the reservation, and updates the vehicle availability showing that it's available
         </p>
         
         <h3>User Interface</h3>
