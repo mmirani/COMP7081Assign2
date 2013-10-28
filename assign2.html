@@ -114,7 +114,7 @@
         <h3>CRC Cards</h3>
         <div class="row">
             <div class="col-md-12">
-                <p>The following are Class Responisbility Collaboration cards. They are used to describe the most relevant classes/objects for this portion of the project. Each card contains its name, list of responsibilities, and a lit of other classes it may interact with. The main class here, the Rental System, acts as a kind of controller, storing arrays of the main different data types the system needs to work with.</p>
+                <p>The following are Class Responisbility Collaboration cards. They are used to describe the most relevant classes/objects for this portion of the project. Each card contains its name, list of responsibilities, and a lit of other classes it may interact with. The main class here, the Rental System, acts as a kind of controller/model, storing arrays of the main different data types the system needs to work with.</p>
             <div>
             <div class="col-md-6">
                 <table class="table table-bordered">
@@ -460,6 +460,8 @@
                 <p>A lot of this database structure would have been predefined in the first phase of this project (IE Group 1), but are displayed here for clarity in how the tables are linked together. Reservation for example is only being used to tie some of the other tables together, and we're only using it to perform an ID lookup if a customer attempts to rent a vehicle having already made a reservation.</p>
 
                 <p>Additional fields would have been added to some existing tables to extend upon functionality that would have already been done, for example insurance, which is a new feature, that now needs to be stored in both Vehicles and Reservations.</p>
+
+                <p>Customer, Location, Insurance and Vehicle all have a many to one relationship with Reservation. Vehicle Type and Rates have a many to one relationship with Vehicle. This means that the rows of data stored in these tables can be used in multiple rows of data in the other.</p>
             <div>            
             <div class="col-md-12">
                 <img src="DatabaseDiagrams\comp7081_assignment2_database_diagram.png" alt="Database Diagram" />
@@ -468,6 +470,11 @@
         
         <h3>Detailed Class Diagrams</h3>
         <div class="row">
+            <div class="col-md-12">
+                <p>These class diagrams expand upon the already defined CRC cards. Here the individual fields and their datatypes are defined. as well as the main methods that will be used to perform their functions either on existing data inside the class, or with other classes that they interact with. Very similar to the database diagram.</p>
+                <p>Each class will also have numerous methods for getting and setting data, these are not displayed as to save space, and are just used for either setting values inside the class, or retriving values from the class.</p>
+                <p>Once again, RentalSystem is acting as a type of controller/model class to manage all the rental data.</p>
+            <div>              
             <div class="col-md-12">
                 <img src="DetailedClassDiagram\DetailedClassDiagram.png" alt="Detailed Class Diagram" />
             </div>
